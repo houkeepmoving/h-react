@@ -1,0 +1,12 @@
+.idea
+.tmp
+.DS_Store
+.sass-cache
+.tags
+node_modules
+logs
+*.rar
+npm-debug.log
+npm-debug.log.*
+yarn.lock
+Thumbs.db

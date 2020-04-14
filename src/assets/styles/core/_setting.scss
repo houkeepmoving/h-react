@@ -1,0 +1,73 @@
+@charset "UTF-8";
+// setting scss
+
+// font相关
+//-----------------------------------------------------
+/* stylelint-disable declaration-colon-space-after */
+$baseFontSize:          14px !default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$fontCn:                "SimSun"; //宋体
+$fontYaHei:             "Microsoft Yahei"; //微软雅黑
+$fontHeiTi:             "SimHei"; //黑体
+
+// 路径相关
+//-----------------------------------------------------
+$imgPath:             "../images" !default;
+// $imgPath:           'http://s.autoimg.cn/wz/cus/products/images' !default;
+// $imgPath: 					   'https://x.autoimg.cn/yc/cus/products' !default
+
+// font 主要颜色
+$color-red: #db325a;
+$color-info: #797d80;
+$color-primary: #494b4d;
+
+$line-border-color: #dcdfe0;
+$body-bg-color: #f9f9f9;
+
+$white: #fff;
+
+
+// $auto-color: #2873FF;
+$auto-color: #0055FF;
+
+// 间隙
+$gutterWidth: pr(24);
+
+// 字体大小
+$fs40: pr(40);
+$fs36: pr(36);
+$fs34: pr(34);
+$fs32: pr(32);
+$fs30: pr(30);
+$fs28: pr(28);
+$fs26: pr(26);
+$fs24: pr(24);
+
+// 公共字体包
+@font-face { // 汽车之家logo字体
+  font-family: YCZJ-FZCCHJW;
+  src: url('//x.autoimg.cn/cfw/cfw/assets/font/fzcchjw1.eot');
+  src: url('//x.autoimg.cn/cfw/cfw/assets/font/fzcchjw1.eot?#font-spider') format('embedded-opentype'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/fzcchjw1.woff') format('woff'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/fzcchjw1.ttf') format('truetype'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/fzcchjw1.svg') format('svg');
+}
+
+@font-face { // 数字字体
+  font-family: YCZJ-DINAlternate;
+  src: url('//x.autoimg.cn/cfw/cfw/assets/font/dinalternate.eot');
+  src: url('//x.autoimg.cn/cfw/cfw/assets/font/dinalternate.eot?#font-spider') format('embedded-opentype'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/dinalternate.woff') format('woff'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/dinalternate.ttf') format('truetype'),
+  url('//x.autoimg.cn/cfw/cfw/assets/font/dinalternate.svg') format('svg');
+}
+
+:global {
+  body.modal-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

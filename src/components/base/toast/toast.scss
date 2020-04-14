@@ -1,0 +1,22 @@
+@import '../../../assets/styles/core/base';
+@import '../../../assets/styles/core/setting';
+@import '../../../assets/styles/core/reset';
+
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(0, 0, 0, .9);
+  border-radius: pr2(8);
+  text-align: center;
+  z-index: 999999;
+  padding: pr2(16);
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  span {
+    font-family: PingFangSC-Regular;
+    font-size: pr2(14);
+    color: #FFFFFF;
+  }
+}

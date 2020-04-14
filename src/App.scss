@@ -1,0 +1,11 @@
+@import './assets/styles/core/base';
+@import './assets/styles/core/setting';
+@import './assets/styles/core/reset';
+
+.app_container {
+  width: 100%;
+  height: 100%;
+  &.padding_top {
+    padding-top: pr2(44);
+  }
+}

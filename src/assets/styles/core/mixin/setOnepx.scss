@@ -1,0 +1,57 @@
+/*
+ * 设置上、下、左、右边框 1px
+ * author: lb
+ * time: 2017/08/16;
+ */
+
+@mixin borderTop($c: #e8e8e8) {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  color: $c;
+  border-top: 1px solid $c;
+  transform:scaleY(0.5);
+  transform-origin:0 0;
+}
+
+@mixin borderBottom($c: #e8e8e8) {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  color: $c;
+  border-bottom: 1px solid $c;
+  transform:scaleY(0.5);
+  transform-origin:0 100%;
+}
+
+@mixin borderLeft($c: #e8e8e8) {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  color: $c;
+  border-left: 1px solid $c;
+  transform:scaleX(0.5);
+  transform-origin:0 0;
+}
+
+@mixin borderRight($c: #e8e8e8) {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  color: $c;
+  border-right: 1px solid $c;
+  transform:scaleX(0.5);
+  transform-origin:100% 0;
+}

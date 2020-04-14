@@ -1,0 +1,24 @@
+@import '../../../assets/styles/core/base';
+@import '../../../assets/styles/core/setting';
+@import '../../../assets/styles/core/reset';
+
+.go_top {
+  width: pr(80);
+  height: pr(80);
+  position: fixed;
+  z-index: 499;
+  bottom: pr(-200);
+  right: pr(20);
+  background: url('../../../assets/images/goTop.png') no-repeat;
+  background-size: 100% 100%;
+  &.active {
+    bottom: pr(110);
+    transition: .3s linear;
+  }
+}
+.container_auto_ui .go_top {
+  width: pr(88);
+  height: pr(88);
+  background: url('../../../assets/images/auto-go-top.png') no-repeat;
+  background-size: 100% 100%;
+}

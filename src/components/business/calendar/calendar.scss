@@ -1,0 +1,126 @@
+@import '../../../assets/styles/core/base';
+@import '../../../assets/styles/core/setting';
+@import '../../../assets/styles/core/reset';
+
+.transparent_mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .5);
+}
+.calendar_main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: pr2(413);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: #FFF;
+  border-radius: pr2(16) pr2(16) 0 0;
+  overflow: hidden;
+  transition: all .3s;
+  transform: translate3d(0, 100%, 0);
+  &.show {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.header {
+  font-size: pr2(17);
+  color: #111E36;
+  line-height: pr2(44);
+  font-family: PingFangSC-Medium,PingFang SC;
+  font-weight: 500;
+  text-align: center;
+}
+.weekdays {
+  font-size: pr2(14);
+  color: #111E36;
+  background: #F8F9FC;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: pr2(34);
+  }
+  li {
+    flex: 1;
+    text-align: center;
+  }
+}
+.contents {
+  width: 100%;
+  height: pr2(335);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-bottom: pr2(70);
+  -webkit-overflow-scrolling: touch;
+}
+.months {
+  margin: pr2(8) 0;
+  font-size: pr2(14);
+  line-height: pr2(20);
+  color: #111E36;
+  text-align: center;
+}
+.picker_inner {
+
+}
+.days {
+  box-sizing: border-box;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: space-around;
+  }
+  li {
+    span {
+      display: block;
+      margin: 0 pr2(13) pr2(8);
+      width: pr2(27);
+      height: pr2(27);
+      font-size: pr2(14);
+      color: #111E36;
+      line-height: pr2(27);
+      text-align: center;
+      &.unable {
+        color: #C5CAD4;
+      }
+      &.active {
+        color: #fff;
+        background: #0055FF;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.confirmate_btn_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  width: 100%;
+  // height: pr2(70);
+  // padding: pr2(3) pr2(20) 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+  background: #fff;
+  .confirmate_btn {
+    margin: pr2(8) pr2(20) pr2(8);
+    height: pr2(50);
+    background: #0055FF;
+    color: #fff;
+    text-align: center;
+    line-height: pr2(50);
+    font-size: pr2(16);
+    border-radius: pr2(4);
+  }
+}
+

@@ -1,0 +1,90 @@
+@import '../../../assets/styles/core/base';
+@import '../../../assets/styles/core/setting';
+@import '../../../assets/styles/core/reset';
+
+.confirm_container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  touch-action: none;
+  padding: 0!important;
+  .confirm_wrapper {
+    width: pr2(280);
+    background: #fff;
+    padding: pr2(20);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: pr2(12);
+    .confirm_title {
+      width: 100%;
+      margin-top: pr2(12);
+      font-size: pr2(17);
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      color: rgba(17,30,54,1);
+      line-height: 1;
+      text-align: center;
+      position: relative;
+      @include ellipsis();
+    }
+    .confirm_content {
+      width: 100%;
+      font-size: pr2(15);
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(102,109,127,1);
+      line-height: 1;
+      text-align: center;
+      margin: pr2(17) 0;
+    }
+    .btn_wrapper {
+      width: 100%;
+      height: pr2(40);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left_btn, .right_btn {
+        width: pr2(115);
+        height: pr2(40);
+        border-radius: pr2(4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: pr2(14);
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .left_btn {
+        position: relative;
+        color: rgba(0, 85, 255, 1);
+        &:after {
+          content: '';
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          top: 0;
+          left: 0;
+          border: 1px solid rgba(0, 85, 255, 0.2);
+          transform: scale(0.5);
+          transform-origin: 0 0;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+      }
+      .right_btn {
+        color: #fff;
+        background: rgba(0, 85, 255, 1);
+      }
+    }
+  }
+}

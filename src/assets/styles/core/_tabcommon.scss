@@ -1,0 +1,408 @@
+@charset 'UTF-8';
+
+a, a:link, a:visited, a:hover {
+  color: inherit !important;
+}
+em, i {
+  font-style: normal;
+}
+p {
+  color: #494b4d;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+body {
+  background-color: $body-bg-color;
+
+}
+input[type="submit"], input[type="checkbox"], input[type="checkbox"]:checked {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+input::placeholder {
+  vertical-align: middle;
+  line-height: 1.3;
+}
+.wrap {
+  background-color: $body-bg-color;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mt6 {
+  margin-top: pr(6);
+}
+.mb10 {
+  margin-bottom: pr(10);
+}
+.mt20 {
+  margin-top: pr(20);
+}
+.pl24 {
+  padding-left: pr(24);
+}
+.fn_block {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  // font-size: 0;
+}
+.fn_hide {
+  display: none;
+}
+.fl{
+  float: left;
+}
+.fr {
+  float: right;
+}
+.ft_red {
+ color: $color-red !important;
+}
+.fs32 {
+  font-size: $fs32 !important;
+}
+.pr90 {
+  padding-right: pr(90);
+}
+.bg_red {
+  background-color: $color-red;
+}
+.ft_d {
+  color: #919599;
+  font-size: $fs24;
+  // text-decoration: line-through;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.mb16 {
+  margin-bottom: pr(16);
+}
+.pl56 {
+  padding-left: pr(56) !important;
+}
+.pl12 {
+  padding-left: pr(12) !important;
+}
+
+.fn-bg-shadow {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f3f1;
+}
+.md_hd {
+  position: relative;
+  line-height: pr(88);
+  background-color: $white;
+  color: #494b4d;
+  font-size: $fs28;
+  overflow: hidden;
+  &:after {
+    @include borderBottom(#dedfe0);
+  }
+}
+.img124_29 {
+  display: inline-block;
+  vertical-align: middle;
+  width: pr(124);
+  height: pr(29);
+}
+.img162_56 {
+  display: inline-block;
+  vertical-align: middle;
+  width: pr(162);
+  height: pr(56);
+}
+
+.md-cell {
+  position: relative;
+  padding: pr(0) pr(24);
+  display: flex;
+  align-item: center;
+
+  &-title {
+    flex: 1;
+  }
+
+  &-more {
+    text-align: right;
+    padding-right: pr(20);
+    font-size: $fs26;
+    // color: #797d80;
+    color: #ff6600;
+  }
+
+  &-time {
+    position: absolute;
+    left: pr(32);
+    padding-left: pr(148);
+
+    em {
+      width: pr(15);
+      text-align: center;
+    }
+
+    &.time {
+      font-size: pr(28);
+    }
+
+    .border {
+      padding: pr(6) pr(8);
+      border: 1px solid #dcdfe0;
+      width: pr(38);
+      height: pr(38);
+      font-size: pr(26);
+    }
+  }
+}
+.img180_120 {
+  width: pr(180);
+  height: pr(120);
+  margin-right: pr(24);
+  background-color: #f5f3f1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.text {
+  color: $color-primary;
+  font-size: $fs32;
+  line-height: 1.2;
+}
+.no_border {
+  .group {
+    // padding-left: pr(24);
+  }
+  &.addr_list .con {
+    background-image: none;
+  }
+}
+
+.to_bottom {
+  height: pr(200);
+}
+
+// 开关的单选框
+.label-switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.6rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  height: 1.6rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-align-self: center;
+  align-self: center;
+}
+.label-switch .checkbox {
+  width: 2.6rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  height: 1.6rem;
+  background: #f5f2f0;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+.label-switch .checkbox:before {
+  content: ' ';
+  position: absolute;
+  left: 0.1rem;
+  top: 0.1rem;
+  width: 2.4rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  height: 1.4rem;
+  background: #f5f2f0;
+  z-index: 1;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.label-switch .checkbox:after {
+  content: ' ';
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 1.4rem;
+  background: #fff;
+  position: absolute;
+  z-index: 2;
+  top: 0.1rem;
+  left: 0.1rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+.label-switch input[type="checkbox"] {
+  display: none;
+}
+.label-switch input[type="checkbox"]:checked + .checkbox {
+  background: #4cd964;
+}
+.label-switch input[type="checkbox"]:checked + .checkbox:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.label-switch input[type="checkbox"]:checked + .checkbox:after {
+  -webkit-transform: translateX(1.1rem);
+          transform: translateX(1.1rem);
+}
+html.android .label-switch input[type="checkbox"] + .checkbox {
+  -webkit-transition-duration: 0;
+          transition-duration: 0;
+}
+html.android .label-switch input[type="checkbox"] + .checkbox:after,
+html.android .label-switch input[type="checkbox"] + .checkbox:before {
+  -webkit-transition-duration: 0;
+          transition-duration: 0;
+}
+
+.label-switch input[type="checkbox"]:checked + .checkbox {
+  background: #db325a !important;
+}
+/* 单选按钮 */
+.label-switch .checkbox {
+  display: inline-block;
+  height: 1.6rem;
+  // padding: pr(6) 0;
+  box-sizing: border-box;
+  line-height: normal;
+  cursor: pointer;
+
+  &.r-check {
+    float: right;
+    height: auto;
+    line-height: 0.8;
+    padding: 0;
+    margin-bottom: pr(-4);
+
+    input[type="checkbox"] {
+      margin-top: pr(-4);
+    }
+  }
+}
+
+// 猜你喜欢
+
+.img300_200 {
+  width: pr(300);
+  height: pr(200);
+  background-color: #f5f3f1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin-right: pr(16);
+  // width: pr(108);
+  padding: pr(0) pr(8);
+  height: pr(36);
+  line-height: pr(36);
+  text-align: center;
+  background-color: #ff9525;
+  @include ellipsis();
+  font-size: pr(24);
+  color: $white;
+  vertical-align: middle;
+
+  &.disabled_tag {
+    width: auto;
+    background-color: #f5f2f0;
+    color: $color-primary;
+    margin-left: 0;
+    margin-right: pr(16);
+  }
+}
+
+.disabled_btn {
+  background-color: #dcdfe0;
+  color: #aaafb3;
+}
+
+// 标签颜色
+.tag.bg-pink {
+  background-color: #db325a;
+}
+.tag.bg-orange {
+  background-color: #ff9326;
+}
+.tag.bg-green {
+  background-color: #17b39b;
+}
+.tag.bg-red {
+  background-color: #ff0000;
+}
+
+// 商品详情页标签背景
+.bg-tag {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: pr(60);
+  height: pr(55);
+  text-align: center;
+  font-size: pr(24);
+  color: $white;
+
+  &.pink {
+    background: url('http://wz0.autoimg.cn/wzdfs/g10/M09/D5/AC/wKjBzVlDduqAN_iUAAAB3SspFpM420.jpg') no-repeat 0 0;
+    background-size: pr(60) pr(55);
+  }
+
+  &.green {
+    background: url('http://wz0.autoimg.cn/wzdfs/g10/M00/D3/94/wKgH0VlDduKAJkRMAAAB3XqteOA846.jpg') no-repeat 0 0;
+    background-size: pr(60) pr(55);
+  }
+
+  &.orange {
+    background: url('http://wz0.autoimg.cn/wzdfs/g10/M04/D5/AB/wKjBzVlDduaAOm__AAAB3Qh159g182.jpg') no-repeat 0 0;
+    background-size: pr(60) pr(55);
+  }
+
+  &.red {
+    background: url('http://wz0.autoimg.cn/wzdfs/g10/M11/D5/AC/wKjBzVlDdu2AfpViAAABlNgNlMA038.jpg') no-repeat 0 0;
+    background-size: pr(60) pr(55);
+  }
+}
+
+// img[lazy=loading] {
+//   position: absolute;
+//   left: 48%;
+//   top: 48%;
+//   width: pr(32) !important;
+//   height: pr(32) !important;
+// }
+// img[lazy=loaded] {
+//   position: relative;
+//   left: auto;
+//   top: auto;
+// }

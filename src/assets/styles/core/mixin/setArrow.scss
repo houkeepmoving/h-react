@@ -1,0 +1,29 @@
+/**
+ * desc: 类似于 '>' 角度为90度上下左右显示的箭头
+ * author: lb
+ * time: 2017/08/16
+ */
+
+@mixin setArrow($direction, $arrowsize, $borderColor, $borderWidth) {
+  display: inline-block;
+  height: $arrowsize;
+  width: $arrowsize;
+  border-width: $borderWidth $borderWidth 0 0;
+  border-color: $borderColor;
+  border-style: solid;
+  @if $direction == top {
+      transform: rotate(-45deg)
+  } @else if $direction == right {
+      transform: rotate(45deg);
+      position: relative;
+      top: -2px;
+  } @else if $direction == bottom {
+      transform: rotate(135deg);
+      position: relative;
+      top: -3px;
+  } @else if $direction == left {
+      transform: rotate(-135deg);
+      position: relative;
+      top: -2px;
+  }
+}

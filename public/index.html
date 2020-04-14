@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" href="https://x.autoimg.cn/cfw/yc/images/favicon.ico?t=20171205"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title></title>
+    <script src="//x.autoimg.cn/app/scripts/ahapp-2.0.js "></script>
+    <!-- 统计引用代码 -->
+    <script src="//x.autoimg.cn/bi/yc/ahas_head.min.js?v=20171212-2"></script>
+    <!-- 统计引用代码 -->
+    <!-- <script>
+      javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+    </script> -->
+    <script>
+      var pvTrack = {};
+      pvTrack.site = 120;
+      pvTrack.category = 1293;
+      pvTrack.subcategory = 15509;
+    </script>
+    <script>
+      (function() {
+        var flexible = {};
+        var baseNum = 16;
+        var designWidth = 750;
+        flexible.dpr = window.devicePixelRatio || 1;
+        flexible.changeRem = function() {
+          var width = document.documentElement.getBoundingClientRect().width;
+          flexible.ratio = width / designWidth * 2;
+          flexible.rootFontSize = width / designWidth * 2 * baseNum;
+          if (flexible.rootFontSize > 16) {
+            flexible.rootFontSize = 16;
+          }
+          document.documentElement.style.fontSize = flexible.rootFontSize + 'px';
+        };
+        flexible.changeRem();
+        var t;
+        window.addEventListener('resize', function() {
+          clearTimeout(t);
+          t = setTimeout(flexible.changeRem, 300);
+        }, false);
+        window.addEventListener('pageshow', function(e) {
+          if (e.persisted) {
+            clearTimeout(t);
+            t = setTimeout(flexible.changeRem, 300);
+          }
+        }, false);
+        flexible.px2rem = function(px) {
+          return parseInt(px, 10) / baseNum / 2;
+        };
+        flexible.rem2px = function(rem) {
+          return parseFloat((rem * baseNum * flexible.ratio).toFixed(6), 10);
+        };
+        window.flexible = flexible;
+      }());
+    </script>
+    <script>
+      var pingan_sdk_appid = "673A501BCB9C4B9582ED97824969FCCC";
+      var pingan_sdk_vn = "汽车之家M站";
+      var pingan_sdk_vc = "1.0.0";
+    </script>
+    <script type="text/javascript" src="https://iobs02.pingan.com.cn/download/eits-access-dmz-prd/h5sdk_s_3.0.0.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="//x.autoimg.cn/bi/yc/ahas_body.min.js?v=20171211"></script>
+  <script src="//x.autoimg.cn/bi/common/pv.min.js?v=20171211"></script>
+</html>

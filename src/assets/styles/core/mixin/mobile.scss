@@ -1,0 +1,9 @@
+/*
+ * desc: 可点击元素设置高亮色
+ * author: lb
+ * time: 2017/08/27
+ */
+
+@mixin setTapColor($c: rgba(0,0,0,0)) {
+	-webkit-tap-highlight-color: $c;
+}

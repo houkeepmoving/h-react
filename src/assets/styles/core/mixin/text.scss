@@ -1,0 +1,21 @@
+/*
+ * desc: 多余文本省略号显示 ellipsis(1行)、ellipsisLn(多行)
+ * author: lb
+ * time: 2017/08/16
+ */
+
+@mixin ellipsis($w:auto) {
+    width: $w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+@mixin ellipsisLn($line) {
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
